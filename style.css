@@ -25,7 +25,7 @@ body {
 
 .home-content h1 { 
     font-size: 3rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-bottom: 1rem
 }
 
@@ -110,47 +110,37 @@ body {
     }
 
 }
-/* =========================================== */
-/* ESTILOS DA SEÇÃO DE PROJETOS        */
-/* =========================================== */
 
-/* Define a aparência da seção inteira */
 .projetos {
-    padding: 80px 10%; /* Espaçamento interno (igual ao .home) */
-    /* Um fundo escuro, um pouco diferente do seu body para criar contraste */
+    padding: 80px 10%; 
     background-color: #222; 
-    color: rgba(255, 255, 255, 0.711); /* Pega a cor do seu body */
+    color: rgba(255, 255, 255, 0.711); 
 }
 
-/* Título da seção (ex: "Meus Projetos") */
+
 .section-title {
     font-size: 2.5rem;
-    color: #ededed; /* Uma cor branca mais sólida */
+    color: #ededed; 
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* O container que vai usar GRID */
+
 .projetos-container {
     display: grid;
-    /* REQUISITO 1 (Grid) e 3 (Responsivo):
-      Cria colunas que se ajustam sozinhas. 
-      - Tenta criar colunas de no mínimo 300px.
-      - "auto-fit": Encaixa quantas colunas couberem.
-      - "1fr": Faz com que elas ocupem todo o espaço igualmente.
-    */
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px; /* Espaço entre os cards */
+    gap: 25px; 
 }
 
-/* O card individual de cada projeto */
+
 .projeto-card {
-    background-color: #333; /* Cor de fundo do card */
-    border-radius: 10px; /* Mesma borda da sua imagem */
+    background-color: #333; 
+    border-radius: 10px; 
     padding: 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra similar à da imagem */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); 
     
-    /* Isso ajuda a alinhar os botões no final, mesmo com textos de tamanhos diferentes */
+    
     display: flex;
     flex-direction: column;
 }
@@ -165,19 +155,19 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    flex-grow: 1; /* Faz o parágrafo "empurrar" os botões para baixo */
+    flex-grow: 1; 
 }
 
-/* Container para as "tags" de tecnologia */
+
 .projeto-tags {
     display: flex;
-    flex-wrap: wrap; /* Permite que as tags quebrem a linha */
+    flex-wrap: wrap; 
     gap: 8px;
     margin-bottom: 20px;
 }
 
 .projeto-tags span {
-    /* Usando a cor azul do seu botão .btn */
+   
     background-color: rgba(18, 115, 241, 0.852); 
     color: white;
     padding: 5px 10px;
@@ -186,18 +176,18 @@ body {
     font-weight: bold;
 }
 
-/* Container para os links (GitHub, Demo, etc.) */
+
 .projeto-links {
     display: flex;
     gap: 15px;
-    margin-top: auto; /* Alinha os botões na base do card */
+    margin-top: auto; 
 }
 
-/* Botão customizado para os cards (baseado no seu .btn) */
+
 .btn-projeto {
-    display: inline-flex; /* Para alinhar ícone e texto */
+    display: inline-flex;
     align-items: center;
-    gap: 8px; /* Espaço entre ícone e texto */
+    gap: 8px; 
     
     padding: 10px 20px;
     background-color: rgba(18, 115, 241, 0.852);
@@ -213,7 +203,6 @@ body {
     background-color: rgba(5, 43, 93, 0.852);
 }
 
-/* Deixa o botão de "Demo" com um visual diferente (opcional) */
 .btn-projeto.demo {
     background-color: #555;
 }
@@ -222,16 +211,14 @@ body {
 }
 
 
-/* =========================================== */
-/* AJUSTE RESPONSIVO PARA PROJETOS       */
-/* =========================================== */
+
 @media (max-width: 900px) {
     .projetos {
-        /* Reduz o padding em telas menores, igual ao seu .home */
+        
         padding: 50px 5%; 
     }
 
     .section-title {
-        font-size: 2rem; /* Diminui um pouco o título */
+        font-size: 2rem;
     }
 }
