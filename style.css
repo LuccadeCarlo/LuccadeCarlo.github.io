@@ -110,3 +110,128 @@ body {
     }
 
 }
+/* =========================================== */
+/* ESTILOS DA SEÇÃO DE PROJETOS        */
+/* =========================================== */
+
+/* Define a aparência da seção inteira */
+.projetos {
+    padding: 80px 10%; /* Espaçamento interno (igual ao .home) */
+    /* Um fundo escuro, um pouco diferente do seu body para criar contraste */
+    background-color: #222; 
+    color: rgba(255, 255, 255, 0.711); /* Pega a cor do seu body */
+}
+
+/* Título da seção (ex: "Meus Projetos") */
+.section-title {
+    font-size: 2.5rem;
+    color: #ededed; /* Uma cor branca mais sólida */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* O container que vai usar GRID */
+.projetos-container {
+    display: grid;
+    /* REQUISITO 1 (Grid) e 3 (Responsivo):
+      Cria colunas que se ajustam sozinhas. 
+      - Tenta criar colunas de no mínimo 300px.
+      - "auto-fit": Encaixa quantas colunas couberem.
+      - "1fr": Faz com que elas ocupem todo o espaço igualmente.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Espaço entre os cards */
+}
+
+/* O card individual de cada projeto */
+.projeto-card {
+    background-color: #333; /* Cor de fundo do card */
+    border-radius: 10px; /* Mesma borda da sua imagem */
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra similar à da imagem */
+    
+    /* Isso ajuda a alinhar os botões no final, mesmo com textos de tamanhos diferentes */
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card h3 {
+    font-size: 1.5rem;
+    color: #ededed;
+    margin-bottom: 15px;
+}
+
+.projeto-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz o parágrafo "empurrar" os botões para baixo */
+}
+
+/* Container para as "tags" de tecnologia */
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as tags quebrem a linha */
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.projeto-tags span {
+    /* Usando a cor azul do seu botão .btn */
+    background-color: rgba(18, 115, 241, 0.852); 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Container para os links (GitHub, Demo, etc.) */
+.projeto-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Alinha os botões na base do card */
+}
+
+/* Botão customizado para os cards (baseado no seu .btn) */
+.btn-projeto {
+    display: inline-flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+    
+    padding: 10px 20px;
+    background-color: rgba(18, 115, 241, 0.852);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-projeto:hover {
+    background-color: rgba(5, 43, 93, 0.852);
+}
+
+/* Deixa o botão de "Demo" com um visual diferente (opcional) */
+.btn-projeto.demo {
+    background-color: #555;
+}
+.btn-projeto.demo:hover {
+    background-color: #777;
+}
+
+
+/* =========================================== */
+/* AJUSTE RESPONSIVO PARA PROJETOS       */
+/* =========================================== */
+@media (max-width: 900px) {
+    .projetos {
+        /* Reduz o padding em telas menores, igual ao seu .home */
+        padding: 50px 5%; 
+    }
+
+    .section-title {
+        font-size: 2rem; /* Diminui um pouco o título */
+    }
+}
